@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказы фирмы разработки ПО</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="order" data-step="1" data-status="show">
+        <div class="container">
+            <h1 class="order__title">(Шаг 1) Оформление заказа</h1>
+            <form class="form">
+                <div class="form__block">
+                    <p class="form__title">Контактные данные</p>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="name" placeholder="Имя*" required> 
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="company" placeholder="Компания*" required>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="tel" name="phone" placeholder="Телефон*" required>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="email" name="email" placeholder="E-mail">
+                    </label>
+                </div>
+                <div class="form__block">
+                    <p class="form__title">Информация о заказе</p>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="manager" placeholder="Менеджер" readonly>
+                        <div class="form__select">
+                            <p class="form__select-item">Имя менеджера 1</p>
+                            <p class="form__select-item">Имя менеджера 2</p>
+                            <p class="form__select-item">Имя менеджера 3</p>
+                        </div>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="product" placeholder="Услуга" readonly>
+                        <div class="form__select">
+                            <p class="form__select-item">Веб-сайт</p>
+                            <p class="form__select-item">Мобильное приложение</p>
+                            <p class="form__select-item">CRM</p>
+                            <p class="form__select-item">CMS</p>
+                            <p class="form__select-item">Дизайн ПО</p>
+                            <p class="form__select-item">Интернет-продвижение</p>
+                            <p class="form__select-item">Верстка по макету</p>
+                        </div>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" placeholder="Приблизительный бюджет" name="budget">
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="file" name="file">
+                        <div class="form__file">
+                            <img src="./img/file.png" alt="">
+                            <p>Прикрепите файл с макетом или ТЗ</p>
+                        </div>
+                    </label>
+                </div>
+                <button class="form__button">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="order" data-step="2" data-status="hidden">
+        <div class="container">
+            <h1 class="order__title">(Шаг 2) Подтвердите заказ</h1>
+            <form class="form">
+                <div class="form__block">
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="name" placeholder="Имя" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="company" placeholder="Компания" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="tel" name="phone" placeholder="Телефон" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="email" name="email" placeholder="E-mail" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="manager" placeholder="Менеджер" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="product" placeholder="Услуга" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" placeholder="Приблизительный бюджет" name="budget" readonly>
+                    </label>
+                    <label class="form__label">
+                        <input class="form__input" type="text" name="file" readonly>
+                    </label>
+                </div>
+                <button class="form__button">Подтвердить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="order" data-step="3" data-status="hidden">
+        <div class="container">
+            <h1 class="order__title">Ваш заказ успешно оформлен!</h1>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
